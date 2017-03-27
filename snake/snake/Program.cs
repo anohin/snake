@@ -14,10 +14,16 @@ namespace snake
         {
 
             Point p1 = new snake.Point(1, 3, '*');
-            p1.Draw();
-
+            
             Point p2 = new snake.Point(4, 6, '#');
-            p2.Draw();
+
+            List<Point> pList = new List<Point>();
+
+            pList.Add(p1);
+            pList.Add(p2);
+
+            pList[0].Draw();
+            pList[1].Draw();
 
             Console.ReadLine();
         }
