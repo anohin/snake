@@ -17,7 +17,8 @@ namespace snake
                 Point p = new Point(tail);
                 p.Move(i, direct);
                 pList.Add(p);
-            } 
+                p.Draw();
+            }
         }
     }
 }
