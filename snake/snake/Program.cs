@@ -12,18 +12,7 @@ namespace snake
 
         static void Main(string[] args)
         {
-
-            Point p1 = new snake.Point(1, 3, '*');
-            
-            Point p2 = new snake.Point(4, 6, '#');
-
-            List<Point> pList = new List<Point>();
-
-            pList.Add(p1);
-            pList.Add(p2);
-
-            pList[0].Draw();
-            pList[1].Draw();
+            Rectangle rect = new Rectangle(5, 5, 60, 30, '*');
 
             Console.ReadLine();
         }
