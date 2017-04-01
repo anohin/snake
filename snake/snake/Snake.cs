@@ -43,7 +43,9 @@ namespace snake
         }
 
         public void handleKey(ConsoleKey key)
+
         {
+
             if (key == ConsoleKey.LeftArrow)
             {
                 direction = Directions.LEFT;
@@ -62,5 +64,19 @@ namespace snake
                 direction = Directions.UP;
             }
         }
+
+        internal bool Eat(Point food)
+        {
+            Point head = GetNextPoint();
+            if (head.IsHit(food))
+            {
+                food.sym = head.sym;
+                pList.Add(food);
+                return true;
+            }else
+            {
+                return false;
+            }
+        } 
     }
 }
